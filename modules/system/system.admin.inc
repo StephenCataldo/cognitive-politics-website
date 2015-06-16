@@ -136,7 +136,7 @@ function system_settings_overview() {
 function system_themes_page() {
   // Get current list of themes.
   $themes = system_rebuild_theme_data();
-  uasort($themes, 'system_sort_modules_by_info_name');
+  //uasort($themes, 'system_sort_modules_by_info_name');
 
   $theme_default = variable_get('theme_default', 'bartik');
   $theme_groups  = array();
@@ -983,7 +983,11 @@ function _system_modules_build_row($info, $extra) {
   $form = array(
     '#tree' => TRUE,
   );
-  // Set the basic properties.
+	// Set the basic properties.
+	if (!isset($info['name'])) { 
+		print '<pre>';
+		print_r($info);
+	}
   $form['name'] = array(
     '#markup' => $info['name'],
   );

@@ -1,0 +1,21 @@
+/* see also: cogpol.css */
+
+.group-book-display {
+  float: left;
+}
+.group-book-display .field-name-field-image-book {
+  border: 2px solid #8d12ed;
+  background: #e5daed;
+  padding: .5em;
+  font-size: 1.1em;
+	margin-right: .8em;
+}
+.group-book-display .field-name-field-sell-links {
+	position: relative;
+	top: -40px;
+}
+.group-book-display .field-name-field-sell-links a {
+	background: #333;
+	color: #eee;
+}
+
