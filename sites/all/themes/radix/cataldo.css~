@@ -12,10 +12,12 @@
 }
 .group-book-display .field-name-field-sell-links {
 	position: relative;
-	top: -40px;
+	top: -70px;
+	left: -12px;
 }
 .group-book-display .field-name-field-sell-links a {
 	background: #333;
 	color: #eee;
+	padding: 3px 5px;
 }
 

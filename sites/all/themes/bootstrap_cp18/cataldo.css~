@@ -1,0 +1,54 @@
+/* see also: cogpol.css */
+/* this was with radix theme 20150619, now  */
+
+
+/*** Colorizing Take #1 ***/
+h2.pane-title {
+	color: #8d12ed;
+	background: rgba(229,239,223, 1);
+	padding: 4px 6px; /* weird with the floats. Also works oddly. */
+	display: inline-block; /* still leaves a little weirdness. */
+	margin-left: 6px;
+	/*margin-top: 1.2em;*/
+  margin-top: 1px;
+	margin-bottom: 0px;
+} 
+.radix-layouts-header h2.pane-title {
+	margin-top: 18px;
+}
+.front h1 {
+	display: none;
+}
+
+/*** Front Page Fiddling ***/
+
+/* fiddling with pane-title on front page */
+.front h2.pane-title {
+	float: right;
+	font-size: 18px;
+}
+
+.group-book-display {
+  float: left;
+}
+.field-name-body {
+ /*background: yellow;*/
+}
+.group-book-display .field-name-field-image-book {
+  border: 2px solid #8d12ed;
+  background: #e5daed;
+  padding: .5em;
+  font-size: 1.1em;
+	margin-right: .8em;
+}
+.group-book-display .field-name-field-sell-links {
+	position: relative;
+	top: -70px;
+	left: -12px;
+}
+.group-book-display .field-name-field-sell-links a {
+	background: #333;
+	color: #eee;
+	padding: 3px 5px;
+}
+
