@@ -20,6 +20,32 @@ h2.pane-title {
 	display: none;
 }
 
+/*** Margin for book for non-home-page fiddling ***/
+#mini-panel-get_the_book_sidebar {
+	float: right;
+}
+#mini-panel-get_the_book_sidebar h2 {
+	display: none;
+}
+.pane-content .node-home-slice .field-name-field-image-book {
+  border: 2px solid #8d12ed;
+  background: #e5daed;
+  padding: .5em;
+  font-size: 1.1em;
+  margin-right: .8em;
+}
+#mini-panel-get_the_book_sidebar .field-name-field-sell-links {
+  position: relative;
+  top: -70px;
+  left: -12px;
+}
+#mini-panel-get_the_book_sidebar .field-name-field-sell-links a {
+  background: #333;
+  color: #eee;
+  padding: 3px 5px;
+}
+
+
 /*** Front Page Fiddling ***/
 
 /* fiddling with pane-title on front page */
