@@ -10,7 +10,7 @@ h2.pane-title {
 	display: inline-block; /* still leaves a little weirdness. */
 	margin-left: 6px;
 	/*margin-top: 1.2em;*/
-  margin-top: 1px;
+  margin-top: 1px; /* some screen-size adjustments elsewhere */
 	margin-bottom: 0px;
 } 
 .radix-layouts-header h2.pane-title {
@@ -57,8 +57,11 @@ h2.pane-title {
 .group-book-display {
   float: left;
 }
-.field-name-body {
- /*background: yellow;*/
+
+/* clear around the book ... title or body, not sure yet.
+ * Title would require change node.tpl */
+.front #node-25 .field-name-body {
+ clear: right;
 }
 .group-book-display .field-name-field-image-book {
   border: 2px solid #8d12ed;
@@ -78,3 +81,129 @@ h2.pane-title {
 	padding: 3px 5px;
 }
 
+/*-- Front Page Second Row, meh, why no classes? --*/
+#node-24 .container-fluid .row:nth-child(2) {
+	background: red;
+	margin-left: 0;
+	margin-right: 0;
+	background-color: rgba(229, 239, 223, 1);
+}
+#node-24 .container-fluid .row:nth-child(2) .pane-title {
+	/* float: right, font-size: 18 is elsewhere. */
+	padding: 1em;
+	padding-left: .6em;
+    border-bottom-color: #afda95;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    color: #8d12ed;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 6px;
+    margin-top: 1px;
+   background-color: transparent;
+}
+#node-24 .container-fluid .row:nth-child(2) .pane-content {
+	padding: 1em;
+	color: #2c3e50; /* this is the same as the background behind the
+		default menu-bar. I may be removing these colors for purple, but
+	  it does look nice as text! */
+}
+#node-24 .container-fluid .row:nth-child(2) .panel-pane {
+	margin-bottom: 0px;
+	margin: 0;
+	background-color: rgba(229, 239, 223, 1);
+}
+#node-24 .container-fluid .row:nth-child(2) .panel-panel {
+	margin: 0;
+	padding-left: 10px; /* theme defaults to 15px each */
+	padding-right: 0px;
+}
+/* For 3 col: */
+@media screen and (max-width: 991px) {
+	#node-24 .container-fluid .row:nth-child(2) h2.pane-title {
+		padding: 0px 6px 6px 6px;
+		margin-left: 6px;
+		margin-top: .75em; /* some screen-size adjustments here */
+		margin-bottom: 0px;
+		font-size: 1.05em;
+	}
+	#node-24 .container-fluid .row:nth-child(2) .panel-panel:nth-child(n+2) .panel-pane {
+		border-top: 2px solid rgba(255,255,255,.8);
+	}
+}
+@media screen and (min-width: 992px) {
+	#node-24 .container-fluid .row:nth-child(2) .panel-panel:nth-child(n+2) .panel-pane {
+		border-left: 2px solid rgba(255,255,255,.8);
+	}
+	#node-24 .container-fluid .row:nth-child(2) .panel-panel:nth-child(1) {
+		padding-left: 0px;
+	}
+}
+/*** Mailchimp Newsletter ***/
+
+/* enclose the floats */
+.pane-mailchimp-signup-signup {
+	overflow:hidden;
+	padding-bottom: 1.5em;
+	padding-top: 0.0em; /* there is stray padding from somewhere. */
+}
+@media screen and (max-width: 760px) {
+	.mailchimp-signup-subscribe-form:hover .form-item-mergevars-FNAME,
+	.mailchimp-signup-subscribe-form:hover .form-item-mergevars-LNAME {
+		display: block;
+	}
+	.mailchimp-signup-subscribe-form .form-item-mergevars-FNAME,
+	.mailchimp-signup-subscribe-form .form-item-mergevars-LNAME {
+		display: none;
+	}
+	.mailchimp-signup-subscribe-form input {
+		width: 240px;
+		margin-right: 2px;
+	}
+}
+/* hang on to desktop style with smaller buttons here */
+@media screen and (min-width: 700px) and (max-width: 930px) {
+	.mailchimp-signup-subscribe-form input {
+		width: 180px;
+    float: right;
+    margin-right: 2px;
+	}
+}
+@media screen and (min-width: 931px) {
+	.mailchimp-signup-subscribe-form input {
+		width: 240px;
+		float: right;
+		margin-right: 2px;
+	}
+}
+@media screen and (min-width: 931px) and (max-width: 980px) {
+  .mailchimp-signup-subscribe-form input {
+    width: 180px;
+  }
+}
+@media screen and (min-width: 981px) and (max-width: 1020px) {
+	.mailchimp-signup-subscribe-form input {
+		width: 200px;
+	}
+}
+
+/* @media screen and (min-width: 500px)  { /* bigger than mobile */
+#edit-submit {
+	float: right;
+	position: inline-block;
+	margin-right: 2px;
+}
+
+/* Do I really want to hide all the labels? bad practice? */
+.mailchimp-newsletter-mergefields label {
+	display: none;
+}
+.form-item-mergevars-EMAIL {
+/*	display: inline-block;*/
+}
+/*
+.form-item-mergevars-EMAIL::after {
+	content: "*";
+	display: inline-block;
+}
+*/
