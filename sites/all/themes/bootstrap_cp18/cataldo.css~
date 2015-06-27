@@ -4,7 +4,9 @@
 
 /*** Header Imaging ***/
 body {
-	background: rgba(228,239,222,1) url("./images/web_green_line240.png") repeat-x; 
+	background: rgba(228,239,222,.05); /* sleepy! Get rid of green boxes
+		and might be ok */
+  background: #fff url("./images/web_green_line240.png") repeat-x; 
 	background-position: left -190px;
 } 
 
@@ -12,12 +14,12 @@ body {
 h2.pane-title {
 	color: #8d12ed;
 	background: rgba(229,239,223, 1);
-	padding: 4px 6px; /* weird with the floats. Also works oddly. */
+	padding: 4px 8px; /* weird with the floats. Also works oddly. */
 	display: inline-block; /* still leaves a little weirdness. */
 	margin-left: 6px;
 	/*margin-top: 1.2em;*/
   margin-top: 1px; /* some screen-size adjustments elsewhere */
-	margin-bottom: 0px;
+	margin-bottom: 10px;
 } 
 .radix-layouts-header h2.pane-title {
 	margin-top: 18px;
@@ -26,6 +28,18 @@ h2.pane-title {
 	display: none;
 }
 
+/*** Retheme the "second header" browser-built theme
+ * to primary purple? Might erase this, which sends it back
+ * to business-grey, looks alright ***/
+.pane-plain-box-second-header { /* make it pretty */
+	/* background: rgba(85, 11, 142, 0.9); /* 50% of #550b8e; */
+}
+/* or grey with pretty button. */
+.pane-plain-box-second-header #edit-submit {
+	background: #6d438e; /*#02288e; /* <-- less saturated -- rgba(85, 11, 142, .8);*/
+			/* um, nice (accidental) blue ... maybe replace grey? */
+}
+	
 /*** Margin for book for non-home-page fiddling ***/
 #mini-panel-get_the_book_sidebar {
 	float: right;
