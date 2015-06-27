@@ -1,5 +1,17 @@
 <?php
 
+/** custom **/
+ini_set('memory_limit', '432M');
+ini_set('max_execution_time', '280'); /* cataldo -- making this up */
+ini_set('max_input_time', '600');
+
+ini_set('post_max_size', '428M');
+ini_set('upload_max_filesize', '428M');
+
+
+
+
+
 /**
  * @file
  * Drupal site-specific configuration file.
@@ -224,7 +236,7 @@ $databases = array (
       'port' => '8889',
       'driver' => 'mysql',
       //    'prefix' => 'panopoly_cp1_',
-      'prefix' => '',
+      'prefix' => '', //'_try_again_',
 
 			// for Drush on Macbook with MAMP
 			//'unix_socket' => '/Applications/MAMP/tmp/mysql/mysql.sock',
@@ -285,7 +297,7 @@ $drupal_hash_salt = '';
  * for you.
  */
 # $base_url = 'http://www.example.com';  // NO trailing slash!
-
+#$base_url = 'http://localhost.com:8888/CP/CP/cognitive-politics-clean-7.37';
 /**
  * PHP settings:
  *

@@ -1,0 +1,3 @@
+name = CP helper
+description = "Mailchimp form, etc"
+core=7.x
