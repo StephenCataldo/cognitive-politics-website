@@ -2,6 +2,12 @@
 /* this was with radix theme 20150619, now  */
 
 
+/*** Header Imaging ***/
+body {
+	background: rgba(228,239,222,1) url("./images/web_green_line240.png") repeat-x; 
+	background-position: left -190px;
+} 
+
 /*** Colorizing Take #1 ***/
 h2.pane-title {
 	color: #8d12ed;
@@ -86,7 +92,7 @@ h2.pane-title {
 	background: red;
 	margin-left: 0;
 	margin-right: 0;
-	background-color: rgba(229, 239, 223, 1);
+	background-color: #e9efe5; /*rgba(229, 239, 223, 1); */
 }
 #node-24 .container-fluid .row:nth-child(2) .pane-title {
 	/* float: right, font-size: 18 is elsewhere. */
@@ -104,12 +110,14 @@ h2.pane-title {
 }
 #node-24 .container-fluid .row:nth-child(2) .pane-content {
 	padding: 1em;
-	color: #2c3e50;
+	/*color: #2c3e50; /* this is the same as the background behind the
+		default menu-bar. I may be removing these colors for purple, but
+	  it does look nice as text! */
 }
 #node-24 .container-fluid .row:nth-child(2) .panel-pane {
 	margin-bottom: 0px;
 	margin: 0;
-	background-color: rgba(229, 239, 223, 1);
+	background-color: #e9efe5; /* rgba(229, 239, 223, .5);*/
 }
 #node-24 .container-fluid .row:nth-child(2) .panel-panel {
 	margin: 0;
