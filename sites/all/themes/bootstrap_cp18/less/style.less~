@@ -8,6 +8,3 @@
 @import 'header.less';
 @import 'content.less';
 @import 'footer.less';
-
-// Subtheme Specific
-@import 'cataldo.less';     /* note: also cataldo.css via info */

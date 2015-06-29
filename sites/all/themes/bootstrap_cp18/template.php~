@@ -5,6 +5,37 @@
  * template.php
  */
 
+/**
+ * function bootstrap_cp18_preprocess_node
+ * Clean up Submitted by. Might remove myself, keep guest bloggers!
+ **/
+function bootstrap_cp18_preprocess_node(&$variables) {
+	kpr( system_get_date_types() );
+
+	// time() is now in seconds
+	// date(format, time in seconds) formats
+	if ( time() - $variables['created'] < 24*60*60 ) { // today?
+		$date = format_interval((time() - $variables['created']) , 2) . t(' ago');
+	  // changed or created both make some sense
+  } elseif ( time() - $variables['created'] < 24*60*60*7 ) {
+		$date = format_date($variables['created'], 'custom', 'l');
+	} else {
+		$date = format_date($variables['created'], 'custom', 'D Y-m-d'); 
+		// checked xkcd
+	}
+	//$date = format_date($variables['created'], 'since', 'now');
+  $variables['submitted'] = t('!username !datetime', array('!username' => $variables['name'], '!datetime' => $date)); //$variables['date']));
+//format_date($node->created, 'custom', 'd/m/Y');
+	/** Guest Blog, Themed Blog, Nothing **/
+	kpr($variables);
+
+
+	// uid = 4 is me again. Do something different!
+	if ( $variables['uid'] == 4 ) {	
+		$variables['user_picture'] = "not me again";
+	}
+}
+
 function bootstrap_cp18_preprocess_menu_link(&$variables) {
 /* <span class="glyphicon glyphicon-class-name"></span> */
   // the class array is here
@@ -12,8 +43,9 @@ function bootstrap_cp18_preprocess_menu_link(&$variables) {
 
 		$variables['element']['#original_link']['link_title'] = 
 		$variables['element']['#title'] = 
-			'<span class="glyphicon glyphicon-search"></span>';
+			'<span class="glyphicon glyphicon-home"></span>&nbsp; Cognitive Politics';
 			//'<i class="icon-home icon-white"></i>'; 
+		$variables['#attributes']['class'][] = 'navbar-header-replace';
 		$variables['#attributes']['class'][] = 'glyphicon';
 		$variables['#attributes']['class'][] = 'glyphicon-home';
 		$variables['element']['#localized_options']['html'] = TRUE;
@@ -29,7 +61,6 @@ function bootstrap_cp18_preprocess_menu_link(&$variables) {
 
 
 
-    kpr($variables);
 	}
   //$variables['element']['#attributes']['class'];
 }

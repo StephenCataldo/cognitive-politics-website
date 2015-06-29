@@ -1,0 +1,58 @@
+// Bootstrap variables.
+@import 'variables.less';
+
+/***!!! Semi-Functional Changes !!!***/
+
+/** Remove some h1's on panels. Do this in css, since the titles are obvious
+only from visual cues in the nav bar (also css) **/
+.node-type-panel h1.page-header {
+	margin: 0; padding: 0; font-size: 1.0em;
+	color: transparent; /* purposefully not well hidden for now,
+		and uses the right amount of space to look good. Revisit?!!
+		These are nearly-breadcrumbs if I make them visible, maybe push
+		up a few pixels */
+}
+
+
+.group-book-display .field-name-field-image-book ,
+.pane-content .node-home-slice .field-name-field-image-book {
+	padding: .4em;
+  border: 0px solid @brand-primary;
+  background: lighten(@brand-primary, 30%);
+  font-size: 1.1em;
+  margin-right: .8em;
+/* e4efde greens hide the book ... go for sharp contrast, letting book
+ * own the colors 
+border: 4px solid #e4efde;
+-webkit-box-shadow: inset 0 0 20px yellow;
+   -moz-box-shadow: inset 0 0 20px red;
+    -ms-box-shadow: inset 0 0 20px #000;
+        box-shadow: inset 0 0 20px #fff;
+*/
+}
+
+/*** The book, in the sidebar or navbar, migrating here ***/
+.region-navigation #mini-panel-get_the_book_sidebar .field-name-field-sell-links {
+    top: -190px; /* topbar */
+    width: 100%;
+    right: -12px;
+    text-align: center;
+    border-bottom: 3px solid @brand-thepurple;
+}
+.region-navigation #mini-panel-get_the_book_sidebar .field-name-field-sell-links a {
+  background: @brand-thepurple;
+  width: 100%;
+  color: #eee;
+  padding: 4px 8px;
+  position: relative;
+  top: .8em;
+}
+
+
+
+
+/*** Nav Bar and Logo Fiddling ***/
+
+/* No logo, but style the first menu item as-if */
+.navbar-header { display: none; }
+.navbar-header-replace a { font-size: 19px; }

@@ -1,7 +1,6 @@
 <?php
 
 function cp_helper_form_mailchimp_signup_subscribe_block_signup_form_alter(&$form, &$form_state, $form_id) {
-	kpr($form);
 	$form['submit']['#weight'] = -50;
 	$form['mergevars']['EMAIL']['#attributes'] = array(
  		'placeholder'=> t('email address *'),

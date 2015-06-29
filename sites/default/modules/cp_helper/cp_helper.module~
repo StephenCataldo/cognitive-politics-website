@@ -9,7 +9,7 @@ function cp_helper_form_mailchimp_signup_subscribe_block_signup_form_alter(&$for
 	);
 	$form['mergevars']['FNAME']['#attributes'] = array(
  		'placeholder'=> t('first name'),
-		'weight' => 20,
+		'weight' => -20,
 	);
 		$form['mergevars']['LNAME']['#attributes'] = array(
  		'placeholder'=> t('last name'),

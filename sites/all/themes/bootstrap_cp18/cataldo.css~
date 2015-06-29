@@ -4,7 +4,7 @@
 
 /*** Header Imaging ***/
 body {
-	background: rgba(228,239,222,.05); /* sleepy! Get rid of green boxes
+	/*background: rgba(228,239,222,.05); /* sleepy! Get rid of green boxes
 		and might be ok */
   background: #fff url("./images/web_green_line240.png") repeat-x; 
 	background-position: left -190px;
@@ -43,27 +43,101 @@ h2.pane-title {
 /*** Margin for book for non-home-page fiddling ***/
 #mini-panel-get_the_book_sidebar {
 	float: right;
+	position: absolute;
+	bottom: -24px; /* set the bottom 40 px below the frame it is in,
+			then don't allow it to overflow (except on mouse-over) */
+	right: 50px;
+	height: 130px;
+	padding-left: 20px; /* overflow into this! */
+	overflow: hidden;
+	/*overflow-x: visible; */
+}
+/* ok, if you are logged in, this is over menu items. You're probably me,
+ * 	at least for now.
+ * Instead of visiblizing the overflow, hide it! */
+/* !!! For me only!!! Dev tricks (no one else logged in anyway) */
+.logged-in #mini-panel-get_the_book_sidebar:hover {
+	/*visibility: hidden; /* ha ha! I reinvented flash (this unhovers)*/
+}
+/* from the side, book disappears before you can hover over it,
+ * from the bottom, it should stay */
+.logged-in #navbar:hover #mini-panel-get_the_book_sidebar:hover {
+  display: block;
+}
+.logged-in #navbar:hover #mini-panel-get_the_book_sidebar {
+	display: none;
+}
+
+.navbar-nav {
+	z-index: 400;
+}
+#mini-panel-get_the_book_sidebar:hover {
+	overflow: visible;
+}
+#mini-panel-get_the_book_sidebar:hover img {
+	top: 4px; /* 28px shift down on hover */
+}
+#mini-panel-get_the_book_sidebar:hover .field-name-field-sell-links {
+	/* attached not to the image, image can slide while this stays still */
+}
+#mini-panel-get_the_book_sidebar img {
+	position: relative;
+	top: -24px;
 }
 #mini-panel-get_the_book_sidebar h2 {
 	display: none;
 }
-.pane-content .node-home-slice .field-name-field-image-book {
-  border: 2px solid #8d12ed;
-  background: #e5daed;
-  padding: .5em;
-  font-size: 1.1em;
-  margin-right: .8em;
-}
+/* non-crazy version 
 #mini-panel-get_the_book_sidebar .field-name-field-sell-links {
   position: relative;
   top: -70px;
   left: -12px;
 }
+*/
+@media screen and (max-width: 991px) {
+	#mini-panel-get_the_book_sidebar {
+		display: none;
+	}
+}
+/* absolute positioning version */
+/* I want this to overlow the overflow=hidden! */
+#mini-panel-get_the_book_sidebar .field-name-field-sell-links {
+  position: relative;
+  top: -170px; /* sidebar */
+  left: -12px;
+	z-index: 10;
+	overflow: visible;
+}
+.region-navigation #mini-panel-get_the_book_sidebar .field-name-field-sell-links {
+	  top: -190px; /* topbar */
+		width: 100%;
+		right: -12px;
+		text-align: center;
+		border-bottom: 3px solid purple;
+}
+.region-navigation #mini-panel-get_the_book_sidebar .field-name-field-sell-links a {
+  background: purple;
+	width: 100%;
+  color: #eee;
+  padding: 4px 8px;
+	position: relative;
+	top: .8em;
+}
+
+#mini-panel-get_the_book_sidebar .field-name-field-sell-links a {
+}
+/* Changed mind: just one Sell! link for now */
+#mini-panel-get_the_book_sidebar .field-name-field-sell-links .odd {
+	display: none;
+}
+
 #mini-panel-get_the_book_sidebar .field-name-field-sell-links a {
   background: #333;
   color: #eee;
-  padding: 3px 5px;
+  padding: 4px 8px;
 }
+
+/* In variables.less, divided brand-primary from the-purple */
 
 
 /*** Front Page Fiddling ***/
@@ -82,13 +156,6 @@ h2.pane-title {
  * Title would require change node.tpl */
 .front #node-25 .field-name-body {
  clear: right;
-}
-.group-book-display .field-name-field-image-book {
-  border: 2px solid #8d12ed;
-  background: #e5daed;
-  padding: .5em;
-  font-size: 1.1em;
-	margin-right: .8em;
 }
 .group-book-display .field-name-field-sell-links {
 	position: relative;

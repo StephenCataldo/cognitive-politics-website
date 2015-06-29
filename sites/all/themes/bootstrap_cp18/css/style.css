@@ -1,3 +1,9 @@
+/* Divide brand-primary, too much purple 
+@brand-primary:         darken(#8d12ed, 20%);
+  // #8d12ed; //cataldo
+	// painfully bright on screen  // a dark grey, not a bad color: #2C3E50;
+*/
+/* cataldo */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -266,7 +272,7 @@ body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.42857143;
-  color: #550b8e;
+  color: #2c3e50;
   background-color: #ffffff;
 }
 input,
@@ -519,11 +525,11 @@ mark,
   color: #b4bcc2;
 }
 .text-primary {
-  color: #550b8e;
+  color: #2c3e50;
 }
 a.text-primary:hover,
 a.text-primary:focus {
-  color: #38075f;
+  color: #1a242f;
 }
 .text-success {
   color: #ffffff;
@@ -555,11 +561,11 @@ a.text-danger:focus {
 }
 .bg-primary {
   color: #fff;
-  background-color: #550b8e;
+  background-color: #2c3e50;
 }
 a.bg-primary:hover,
 a.bg-primary:focus {
-  background-color: #38075f;
+  background-color: #1a242f;
 }
 .bg-success {
   background-color: #18bc9c;
@@ -1681,7 +1687,7 @@ legend {
   margin-bottom: 21px;
   font-size: 22.5px;
   line-height: inherit;
-  color: #550b8e;
+  color: #2c3e50;
   border: 0;
   border-bottom: 1px solid transparent;
 }
@@ -1725,7 +1731,7 @@ output {
   padding-top: 11px;
   font-size: 15px;
   line-height: 1.42857143;
-  color: #550b8e;
+  color: #2c3e50;
 }
 .form-control {
   display: block;
@@ -1734,7 +1740,7 @@ output {
   padding: 10px 15px;
   font-size: 15px;
   line-height: 1.42857143;
-  color: #550b8e;
+  color: #2c3e50;
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #dce4ec;
@@ -1747,11 +1753,11 @@ output {
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .form-control:focus {
-  border-color: #550b8e;
+  border-color: #2c3e50;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(85, 11, 142, 0.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(85, 11, 142, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(85, 11, 142, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(44, 62, 80, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(44, 62, 80, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(44, 62, 80, 0.6);
 }
 .form-control::-moz-placeholder {
   color: #acb6c0;
@@ -2095,7 +2101,7 @@ select[multiple].input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #982aef;
+  color: #597ea2;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -2311,26 +2317,26 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #550b8e;
-  border-color: #550b8e;
+  background-color: #2c3e50;
+  border-color: #2c3e50;
 }
 .btn-primary:focus,
 .btn-primary.focus {
   color: #ffffff;
-  background-color: #38075f;
-  border-color: #0e0218;
+  background-color: #1a242f;
+  border-color: #000000;
 }
 .btn-primary:hover {
   color: #ffffff;
-  background-color: #38075f;
-  border-color: #330655;
+  background-color: #1a242f;
+  border-color: #161f29;
 }
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #38075f;
-  border-color: #330655;
+  background-color: #1a242f;
+  border-color: #161f29;
 }
 .btn-primary:active:hover,
 .btn-primary.active:hover,
@@ -2342,8 +2348,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active.focus,
 .open > .dropdown-toggle.btn-primary.focus {
   color: #ffffff;
-  background-color: #25053e;
-  border-color: #0e0218;
+  background-color: #0d1318;
+  border-color: #000000;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -2368,11 +2374,11 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #550b8e;
-  border-color: #550b8e;
+  background-color: #2c3e50;
+  border-color: #2c3e50;
 }
 .btn-primary .badge {
-  color: #550b8e;
+  color: #2c3e50;
   background-color: #ffffff;
 }
 .btn-success {
@@ -3604,7 +3610,7 @@ tbody.collapse.in {
 .dropdown-menu > li > a:focus {
   text-decoration: none;
   color: #ffffff;
-  background-color: #550b8e;
+  background-color: #2c3e50;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -3612,7 +3618,7 @@ tbody.collapse.in {
   color: #ffffff;
   text-decoration: none;
   outline: 0;
-  background-color: #550b8e;
+  background-color: #2c3e50;
 }
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
@@ -3939,7 +3945,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 15px;
   font-weight: normal;
   line-height: 1;
-  color: #550b8e;
+  color: #2c3e50;
   text-align: center;
   background-color: #ecf0f1;
   border: 1px solid #dce4ec;
@@ -4073,7 +4079,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #550b8e;
+  color: #2c3e50;
   background-color: #ffffff;
   border: 1px solid #ecf0f1;
   border-bottom-color: transparent;
@@ -4136,7 +4142,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color: #550b8e;
+  background-color: #2c3e50;
 }
 .nav-stacked > li {
   float: none;
@@ -4635,7 +4641,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: #550b8e;
+  color: #2c3e50;
   background-color: transparent;
 }
 .navbar-inverse .navbar-text {
@@ -4646,7 +4652,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: #550b8e;
+  color: #2c3e50;
   background-color: transparent;
 }
 .navbar-inverse .navbar-nav > .active > a,
@@ -4693,7 +4699,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #550b8e;
+    color: #2c3e50;
     background-color: transparent;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
@@ -4713,14 +4719,14 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ffffff;
 }
 .navbar-inverse .navbar-link:hover {
-  color: #550b8e;
+  color: #2c3e50;
 }
 .navbar-inverse .btn-link {
   color: #ffffff;
 }
 .navbar-inverse .btn-link:hover,
 .navbar-inverse .btn-link:focus {
-  color: #550b8e;
+  color: #2c3e50;
 }
 .navbar-inverse .btn-link[disabled]:hover,
 fieldset[disabled] .navbar-inverse .btn-link:hover,
@@ -4913,11 +4919,11 @@ a.label:focus {
   background-color: #798d8f;
 }
 .label-primary {
-  background-color: #550b8e;
+  background-color: #2c3e50;
 }
 .label-primary[href]:hover,
 .label-primary[href]:focus {
-  background-color: #38075f;
+  background-color: #1a242f;
 }
 .label-success {
   background-color: #18bc9c;
@@ -4958,7 +4964,7 @@ a.label:focus {
   vertical-align: middle;
   white-space: nowrap;
   text-align: center;
-  background-color: #550b8e;
+  background-color: #2c3e50;
   border-radius: 10px;
 }
 .badge:empty {
@@ -4981,7 +4987,7 @@ a.badge:focus {
 }
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #550b8e;
+  color: #2c3e50;
   background-color: #ffffff;
 }
 .list-group-item > .badge {
@@ -5058,7 +5064,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #550b8e;
+  color: #2c3e50;
 }
 .alert {
   padding: 15px;
@@ -5169,7 +5175,7 @@ a.thumbnail.active {
   line-height: 21px;
   color: #ffffff;
   text-align: center;
-  background-color: #550b8e;
+  background-color: #2c3e50;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
@@ -5333,8 +5339,8 @@ button.list-group-item {
 .list-group-item.active:focus {
   z-index: 2;
   color: #ffffff;
-  background-color: #550b8e;
-  border-color: #550b8e;
+  background-color: #2c3e50;
+  border-color: #2c3e50;
 }
 .list-group-item.active .list-group-item-heading,
 .list-group-item.active:hover .list-group-item-heading,
@@ -5350,7 +5356,7 @@ button.list-group-item {
 .list-group-item.active .list-group-item-text,
 .list-group-item.active:hover .list-group-item-text,
 .list-group-item.active:focus .list-group-item-text {
-  color: #bb71f4;
+  color: #8aa4be;
 }
 .list-group-item-success {
   color: #ffffff;
@@ -5716,7 +5722,7 @@ button.list-group-item-danger.active:focus {
   border-color: #ecf0f1;
 }
 .panel-default > .panel-heading {
-  color: #550b8e;
+  color: #2c3e50;
   background-color: #ecf0f1;
   border-color: #ecf0f1;
 }
@@ -5725,28 +5731,28 @@ button.list-group-item-danger.active:focus {
 }
 .panel-default > .panel-heading .badge {
   color: #ecf0f1;
-  background-color: #550b8e;
+  background-color: #2c3e50;
 }
 .panel-default > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #ecf0f1;
 }
 .panel-primary {
-  border-color: #550b8e;
+  border-color: #2c3e50;
 }
 .panel-primary > .panel-heading {
   color: #ffffff;
-  background-color: #550b8e;
-  border-color: #550b8e;
+  background-color: #2c3e50;
+  border-color: #2c3e50;
 }
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #550b8e;
+  border-top-color: #2c3e50;
 }
 .panel-primary > .panel-heading .badge {
-  color: #550b8e;
+  color: #2c3e50;
   background-color: #ffffff;
 }
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #550b8e;
+  border-bottom-color: #2c3e50;
 }
 .panel-success {
   border-color: #18bc9c;
@@ -7011,12 +7017,12 @@ table tr.error {
 .control-group.error textarea,
 .control-group.error select,
 .control-group.error .uneditable-input {
-  color: #550b8e;
+  color: #2c3e50;
   border: 1px solid #dce4ec;
 }
 .control-group.error .help-block,
 .control-group.error .help-inline {
-  color: #550b8e;
+  color: #2c3e50;
 }
 .list-inline > li.first {
   padding-left: 0;
@@ -7102,7 +7108,7 @@ div.password-suggestions ul {
   font-size: 120%;
 }
 .form-autocomplete .glyphicon.glyphicon-spin {
-  color: #550b8e;
+  color: #2c3e50;
 }
 .form-autocomplete .input-group-addon {
   background-color: #ffffff;
@@ -7333,3 +7339,58 @@ table .checkbox input[type="checkbox"] {
 .alert-danger a {
   color: #e6e6e6;
 }
+/***!!! Semi-Functional Changes !!!***/
+/** Remove some h1's on panels. Do this in css, since the titles are obvious
+only from visual cues in the nav bar (also css) **/
+.node-type-panel h1.page-header {
+  margin: 0;
+  padding: 0;
+  font-size: 1.0em;
+  color: transparent;
+  /* purposefully not well hidden for now,
+		and uses the right amount of space to look good. Revisit?!!
+		These are nearly-breadcrumbs if I make them visible, maybe push
+		up a few pixels */
+}
+.group-book-display .field-name-field-image-book,
+.pane-content .node-home-slice .field-name-field-image-book {
+  padding: .4em;
+  border: 0px solid #2c3e50;
+  background: #698aac;
+  font-size: 1.1em;
+  margin-right: .8em;
+  /* e4efde greens hide the book ... go for sharp contrast, letting book
+ * own the colors 
+border: 4px solid #e4efde;
+-webkit-box-shadow: inset 0 0 20px yellow;
+   -moz-box-shadow: inset 0 0 20px red;
+    -ms-box-shadow: inset 0 0 20px #000;
+        box-shadow: inset 0 0 20px #fff;
+*/
+}
+/*** The book, in the sidebar or navbar, migrating here ***/
+.region-navigation #mini-panel-get_the_book_sidebar .field-name-field-sell-links {
+  top: -190px;
+  /* topbar */
+  width: 100%;
+  right: -12px;
+  text-align: center;
+  border-bottom: 3px solid #550b8e;
+}
+.region-navigation #mini-panel-get_the_book_sidebar .field-name-field-sell-links a {
+  background: #550b8e;
+  width: 100%;
+  color: #eee;
+  padding: 4px 8px;
+  position: relative;
+  top: .8em;
+}
+/*** Nav Bar and Logo Fiddling ***/
+/* No logo, but style the first menu item as-if */
+.navbar-header {
+  display: none;
+}
+.navbar-header-replace a {
+  font-size: 19px;
+}
+/* note: also cataldo.css via info */
