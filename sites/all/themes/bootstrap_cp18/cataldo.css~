@@ -11,29 +11,9 @@ body {
 } 
 
 /*** Colorizing Take #1 ***/
-h2.pane-title {
-	color: #8d12ed;
-	background: rgba(229,239,223, 1);
-	padding: 4px 8px; /* weird with the floats. Also works oddly. */
-	display: inline-block; /* still leaves a little weirdness. */
-	margin-left: 6px;
-	/*margin-top: 1.2em;*/
-  margin-top: 1px; /* some screen-size adjustments elsewhere */
-	margin-bottom: 10px;
-} 
-.radix-layouts-header h2.pane-title {
-	margin-top: 18px;
-}
-.front h1 {
-	display: none;
-}
-
 /*** Retheme the "second header" browser-built theme
  * to primary purple? Might erase this, which sends it back
  * to business-grey, looks alright ***/
-.pane-plain-box-second-header { /* make it pretty */
-	/* background: rgba(85, 11, 142, 0.9); /* 50% of #550b8e; */
-}
 /* or grey with pretty button. */
 .pane-plain-box-second-header #edit-submit {
 	background: #6d438e; /*#02288e; /* <-- less saturated -- rgba(85, 11, 142, .8);*/
@@ -108,21 +88,6 @@ h2.pane-title {
 	z-index: 10;
 	overflow: visible;
 }
-.region-navigation #mini-panel-get_the_book_sidebar .field-name-field-sell-links {
-	  top: -190px; /* topbar */
-		width: 100%;
-		right: -12px;
-		text-align: center;
-		border-bottom: 3px solid purple;
-}
-.region-navigation #mini-panel-get_the_book_sidebar .field-name-field-sell-links a {
-  background: purple;
-	width: 100%;
-  color: #eee;
-  padding: 4px 8px;
-	position: relative;
-	top: .8em;
-}
 
 #mini-panel-get_the_book_sidebar .field-name-field-sell-links a {
 }
@@ -142,16 +107,20 @@ h2.pane-title {
 
 /*** Front Page Fiddling ***/
 
-/* fiddling with pane-title on front page */
-.front h2.pane-title {
-	float: right;
-	font-size: 18px;
+.front .radix-layouts-header h2.pane-title {
+	display: none; /* see pane-inner-title */
 }
-
+h2.pane-inner-title {
+  font-size: 24px;
+}
 .group-book-display {
   float: left;
 }
 
+#temp-blog-section h2.pane-title { /* think this whole section may go! */
+	display: none;
+}
+	
 /* clear around the book ... title or body, not sure yet.
  * Title would require change node.tpl */
 .front #node-25 .field-name-body {
@@ -169,37 +138,47 @@ h2.pane-title {
 }
 
 /*-- Front Page Second Row, meh, why no classes? --*/
+.green-panel,
 #node-24 .container-fluid .row:nth-child(2) {
-	background: red;
 	margin-left: 0;
 	margin-right: 0;
 	background-color: #e9efe5; /*rgba(229, 239, 223, 1); */
 }
+.green-panel  .pane-title ,
 #node-24 .container-fluid .row:nth-child(2) .pane-title {
-	/* float: right, font-size: 18 is elsewhere. */
+  display: inline-block;
+	float: right;
+
+	color: #8d12ed;
+	background: rgba(229,239,223, 1);
+	display: inline-block; /* still leaves a little weirdness. */
+	font-size: 18px;
+ 
 	padding: 1em;
 	padding-left: .6em;
     border-bottom-color: #afda95;
     border-bottom-style: solid;
     border-bottom-width: 2px;
     color: #8d12ed;
-    display: inline-block;
     margin-bottom: 0;
     margin-left: 6px;
     margin-top: 1px;
    background-color: transparent;
 }
+.green-panel .pane-content,
 #node-24 .container-fluid .row:nth-child(2) .pane-content {
 	padding: 1em;
 	/*color: #2c3e50; /* this is the same as the background behind the
 		default menu-bar. I may be removing these colors for purple, but
 	  it does look nice as text! */
 }
+.green-panel  .pane-pane,
 #node-24 .container-fluid .row:nth-child(2) .panel-pane {
 	margin-bottom: 0px;
 	margin: 0;
 	background-color: #e9efe5; /* rgba(229, 239, 223, .5);*/
 }
+.green-panel  .pane-panel,
 #node-24 .container-fluid .row:nth-child(2) .panel-panel {
 	margin: 0;
 	padding-left: 10px; /* theme defaults to 15px each */
@@ -207,6 +186,7 @@ h2.pane-title {
 }
 /* For 3 col: */
 @media screen and (max-width: 991px) {
+	.green-panel  h2.pane-title,
 	#node-24 .container-fluid .row:nth-child(2) h2.pane-title {
 		padding: 0px 6px 6px 6px;
 		margin-left: 6px;
@@ -214,6 +194,7 @@ h2.pane-title {
 		margin-bottom: 0px;
 		font-size: 1.05em;
 	}
+	.green-panel .panel-pane,
 	#node-24 .container-fluid .row:nth-child(2) .panel-panel:nth-child(n+2) .panel-pane {
 		border-top: 2px solid rgba(255,255,255,.8);
 	}
@@ -235,41 +216,41 @@ h2.pane-title {
 	padding-top: 0.0em; /* there is stray padding from somewhere. */
 }
 @media screen and (max-width: 760px) {
-	.mailchimp-signup-subscribe-form:hover .form-item-mergevars-FNAME,
-	.mailchimp-signup-subscribe-form:hover .form-item-mergevars-LNAME {
+	.linear-mail .mailchimp-signup-subscribe-form:hover .form-item-mergevars-FNAME,
+	.linear-mail .mailchimp-signup-subscribe-form:hover .form-item-mergevars-LNAME {
 		display: block;
 	}
-	.mailchimp-signup-subscribe-form .form-item-mergevars-FNAME,
-	.mailchimp-signup-subscribe-form .form-item-mergevars-LNAME {
+	.linear-mail .mailchimp-signup-subscribe-form .form-item-mergevars-FNAME,
+	.linear-mail .mailchimp-signup-subscribe-form .form-item-mergevars-LNAME {
 		display: none;
 	}
-	.mailchimp-signup-subscribe-form input {
+	.linear-mail .mailchimp-signup-subscribe-form input {
 		width: 240px;
 		margin-right: 2px;
 	}
 }
 /* hang on to desktop style with smaller buttons here */
 @media screen and (min-width: 700px) and (max-width: 930px) {
-	.mailchimp-signup-subscribe-form input {
+	.linear-mail  .mailchimp-signup-subscribe-form input {
 		width: 180px;
     float: right;
     margin-right: 2px;
 	}
 }
 @media screen and (min-width: 931px) {
-	.mailchimp-signup-subscribe-form input {
+	.linear-mail  .mailchimp-signup-subscribe-form input {
 		width: 240px;
 		float: right;
 		margin-right: 2px;
 	}
 }
 @media screen and (min-width: 931px) and (max-width: 980px) {
-  .mailchimp-signup-subscribe-form input {
+  .linear-mail .mailchimp-signup-subscribe-form input {
     width: 180px;
   }
 }
 @media screen and (min-width: 981px) and (max-width: 1020px) {
-	.mailchimp-signup-subscribe-form input {
+	.linear-mail .mailchimp-signup-subscribe-form input {
 		width: 200px;
 	}
 }
@@ -282,15 +263,6 @@ h2.pane-title {
 }
 
 /* Do I really want to hide all the labels? bad practice? */
-.mailchimp-newsletter-mergefields label {
+.linear-mail .mailchimp-newsletter-mergefields label {
 	display: none;
 }
-.form-item-mergevars-EMAIL {
-/*	display: inline-block;*/
-}
-/*
-.form-item-mergevars-EMAIL::after {
-	content: "*";
-	display: inline-block;
-}
-*/

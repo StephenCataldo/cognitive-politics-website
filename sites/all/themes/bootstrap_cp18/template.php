@@ -10,8 +10,8 @@
  * Clean up Submitted by. Might remove myself, keep guest bloggers!
  **/
 function bootstrap_cp18_preprocess_node(&$variables) {
-	kpr( system_get_date_types() );
 
+	// Fancy date method, getting carried away
 	// time() is now in seconds
 	// date(format, time in seconds) formats
 	if ( time() - $variables['created'] < 24*60*60 ) { // today?
@@ -21,18 +21,14 @@ function bootstrap_cp18_preprocess_node(&$variables) {
 		$date = format_date($variables['created'], 'custom', 'l');
 	} else {
 		$date = format_date($variables['created'], 'custom', 'D Y-m-d'); 
-		// checked xkcd
 	}
-	//$date = format_date($variables['created'], 'since', 'now');
-  $variables['submitted'] = t('!username !datetime', array('!username' => $variables['name'], '!datetime' => $date)); //$variables['date']));
-//format_date($node->created, 'custom', 'd/m/Y');
+  $variables['submitted'] = t('by !username, !datetime', array('!username' => $variables['name'], '!datetime' => $date)); //$variables['date']));
+
 	/** Guest Blog, Themed Blog, Nothing **/
-	kpr($variables);
-
-
 	// uid = 4 is me again. Do something different!
 	if ( $variables['uid'] == 4 ) {	
 		//not yet, but intend to replace my pic. $variables['user_picture'] = "not me again";
+	$variables['user_picture'] = null;
 	}
 }
 

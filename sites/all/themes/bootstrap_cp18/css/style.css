@@ -7342,6 +7342,11 @@ table .checkbox input[type="checkbox"] {
 /***!!! Semi-Functional Changes !!!***/
 /** Remove some h1's on panels. Do this in css, since the titles are obvious
 only from visual cues in the nav bar (also css) **/
+.front h1 {
+  display: none;
+}
+.page-contact h1.page-header,
+.page-contact h1.page-header,
 .node-type-panel h1.page-header {
   margin: 0;
   padding: 0;
@@ -7351,6 +7356,13 @@ only from visual cues in the nav bar (also css) **/
 		and uses the right amount of space to look good. Revisit?!!
 		These are nearly-breadcrumbs if I make them visible, maybe push
 		up a few pixels */
+}
+/*** h2's ***/
+/* Some are green Links. What about plain headings? ***/
+/* !!! Um, might want to differentiate links vs not, but
+ * also prefer this style of all h2's are the same */
+h2 {
+  color: #18bc9c;
 }
 .group-book-display .field-name-field-image-book,
 .pane-content .node-home-slice .field-name-field-image-book {
