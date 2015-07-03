@@ -99,7 +99,7 @@ body {
 #mini-panel-get_the_book_sidebar .field-name-field-sell-links a {
   background: #333;
   color: #eee;
-  padding: 4px 8px;
+	padding: 6px 10px;
 }
 
 /* In variables.less, divided brand-primary from the-purple */
@@ -132,9 +132,28 @@ h2.pane-inner-title {
 	left: -12px;
 }
 .group-book-display .field-name-field-sell-links a {
-	background: #333;
-	color: #eee;
-	padding: 3px 5px;
+	color: #18bc9c;
+	padding: 6px 12px 6px 8px;
+	font-size: 1.1em;
+	background: rgba(255,255,255, .98);
+	border-top: 2px solid #2c3e50;
+	border-bottom: 2px solid #2c3e50;
+	border-right: 1px solid blue;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+/*-- Front Page, Purchase Row --*/
+.front #get-thebook {
+	margin-bottom: 1.5em;
+	margin-top: 1.25em;
+}
+#get-thebook:target div.purchase-row{
+	background: yellow;
+}
+div.purchase-row {
+	width: 100%;
+	text-align: center;
+	font-size: 1.6em;
 }
 
 /*-- Front Page Second Row, meh, why no classes? --*/

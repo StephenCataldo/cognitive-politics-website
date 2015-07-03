@@ -298,6 +298,9 @@ $drupal_hash_salt = '';
  */
 # $base_url = 'http://www.example.com';  // NO trailing slash!
 #$base_url = 'http://localhost.com:8888/CP/CP/cognitive-politics-clean-7.37';
+// this totally breaks things, odd
+$base_url = 'http://localhost:8888/CP/CP/cognitive-politics-clean-7.37;'
+
 /**
  * PHP settings:
  *
