@@ -2,6 +2,54 @@
 /* this was with radix theme 20150619, now  */
 
 
+/*** Exploring new front page image ***/
+.group-book-display .field-name-field-sell-links a {
+	color: #18bc9c;
+	padding: 6px 12px 6px 8px;
+	font-size: 1.1em;
+	background: rgba(255,255,255, .98);
+	border-top: 2px solid #2c3e50;
+	border-bottom: 2px solid #2c3e50;
+	border-right: 1px solid blue;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.group-book-display .field-name-field-image-book {
+	width: 520px; /* 554 x 312 */
+	overflow: hidden;
+	margin-left: -220px;
+}
+.group-book-display .field-name-field-image-book img {
+	height: 378px;
+	width: 671px;
+}
+.group-book-display .field-name-field-sell-links {
+	position: relative;
+	top: -70px;
+	left: -212px; /* was -12px */
+}
+.group-book-display .field-name-field-sell-links a {
+	padding-left: 206px;
+}
+
+.group-book-display .field-name-field-image-book {
+	/* background: transparent; */
+	padding: 0; 
+}
+/* overwrite the less file for the moment */
+.pane-content .node-home-slice .field-name-field-image-book {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.group-book-display {
+	position: relative;
+	top: -37px; /* problem: creates space beneath image */
+	height: 351px;   /* 378-37px, with overflow still on, but there is 
+		some border, so add it back, idunno how much */
+}
+	
+
 /*** Header Imaging ***/
 body {
 	/*background: rgba(228,239,222,.05); /* sleepy! Get rid of green boxes
@@ -123,29 +171,14 @@ h2.pane-inner-title {
 	
 /* clear around the book ... title or body, not sure yet.
  * Title would require change node.tpl */
-.front #node-25 .field-name-body {
+.front #node-36 .field-name-body {
  clear: right;
 }
-.group-book-display .field-name-field-sell-links {
-	position: relative;
-	top: -70px;
-	left: -12px;
-}
-.group-book-display .field-name-field-sell-links a {
-	color: #18bc9c;
-	padding: 6px 12px 6px 8px;
-	font-size: 1.1em;
-	background: rgba(255,255,255, .98);
-	border-top: 2px solid #2c3e50;
-	border-bottom: 2px solid #2c3e50;
-	border-right: 1px solid blue;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-}
+
 /*-- Front Page, Purchase Row --*/
 .front #get-thebook {
 	margin-bottom: 1.5em;
-	margin-top: 1em;
+	margin-top: 1.25em;
 }
 #get-thebook:target div.purchase-row{
 	background: yellow;
@@ -156,6 +189,88 @@ div.purchase-row {
 	font-size: 1.6em;
 }
 
+/*** Book Sales Table ***/
+/*@media only screen and (max-width: 760px) {}*/
+div.book-sale {
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #e9efe5;
+     /* #e9e4ed; green: #e9efe5*/
+  background: rgba(229,239,223, 1);
+	padding-bottom: .5em;
+	padding-top: .5em;
+	border-left: 1px solid #e9e4ed;
+	border-right: 1px solid #e9e4ed;
+    border-bottom: 2px solid #afda95;
+    /* purple, header, book title? color: #8d12ed; */
+}
+div.book-sale .title {
+	color: #8d12ed;
+}
+/*div.book-sale:nth-child(odd) {
+	border-right: 2px solid #afda95;
+}
+div.book-sale:nth-child(even) {
+	border-left: 2px solid #afda95;
+}*/
+.buy-row {
+	overflow: hidden;
+	padding: 1px;
+}
+.buy-row div {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+
+div.buy-image-p {
+	border: 2px solid brown;
+}
+div.buy-image-p {
+	float: left;
+	margin-right: 10px;
+}
+/* Maybe on it's own page tis will look ok */
+Xdiv.buy-image-p:nth-child(even) {
+	float: left;
+	margin: left: -20px;
+	padding-right: 10px;
+}
+Xdiv.buy-image-p:nth-child(odd) {
+	float: right;
+	margin-left: .6em;
+	/* even not odd, style:  margin-right: -20px; */
+}
+div.buy-box {
+	width: 45%;
+	text-align: center;
+	width: 120px;
+	margin: .5em;
+	font-size: .95em;
+	padding: .2em .4em;
+	display: inline-block;
+	float: right;
+	font-size: .8em;
+}
+div.buy-box:nth-child(1) {
+	font-weight: bold;
+	color: white; /* depends on background */
+	background:  #e5daed; /*e9e4ed; /*rgba(141,18,237, 0.1); /* #8d12ed; /* or white #fff; /* only if green background*/
+	border: 1px solid #8d12ed;
+	line-height: 125%; /* shrink this, increase vertical font, maybe */
+}
+div.buy-box a {
+	padding-top: 0;
+}
+div.buy-box div.buy {
+	text-transform: uppercase;
+	font-size: .8em;
+}
+div.buy-box-powells {
+	position: relative;
+	top: -3px; /* to match the well -- eyeball
+			creates extra padding below */
+}
 /*-- Front Page Second Row, meh, why no classes? --*/
 .green-panel,
 #node-24 .container-fluid .row:nth-child(2) {
@@ -163,12 +278,12 @@ div.purchase-row {
 	margin-right: 0;
 	background-color: #e9efe5; /*rgba(229, 239, 223, 1); */
 }
+
 .green-panel  .pane-title ,
 #node-24 .container-fluid .row:nth-child(2) .pane-title {
   display: inline-block;
 	float: right;
 
-	color: #8d12ed;
 	background: rgba(229,239,223, 1);
 	display: inline-block; /* still leaves a little weirdness. */
 	font-size: 18px;
@@ -184,6 +299,7 @@ div.purchase-row {
     margin-top: 1px;
    background-color: transparent;
 }
+
 .green-panel .pane-content,
 #node-24 .container-fluid .row:nth-child(2) .pane-content {
 	padding: 1em;
@@ -297,3 +413,7 @@ div.purchase-row {
 .linear-mail .mailchimp-newsletter-mergefields label {
 	display: none;
 }
+
+/*** Books for Sale ***/
+div.book-sale {
+
