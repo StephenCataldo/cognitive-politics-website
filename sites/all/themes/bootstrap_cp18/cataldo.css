@@ -357,6 +357,15 @@ div.buy-box-powells {
 	margin-bottom: 15px;
 }
 
+#node-23 .panel-3col-33-stacked .panel-col-last {
+	z-index: 101; /* put form above map if conflict, not working, but */
+}
+#node-23 .panel-3col-33-stacked .panel-col {
+	z-index: 1;
+	overflow: hidden; /* this hides the right-end of the map */
+}
+
+
 /*** Mailchimp Newsletter ***/
 
 /* enclose the floats */

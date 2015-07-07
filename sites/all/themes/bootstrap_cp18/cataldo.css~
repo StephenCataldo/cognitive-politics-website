@@ -204,6 +204,9 @@ div.book-sale {
     border-bottom: 2px solid #afda95;
     /* purple, header, book title? color: #8d12ed; */
 }
+div.purple-panel {
+	background-color: #e9e4ed;
+}
 div.book-sale .title {
 	color: #8d12ed;
 }
@@ -353,6 +356,15 @@ div.buy-box-powells {
 .webform-client-form .form-item {
 	margin-bottom: 15px;
 }
+
+#node-23 .panel-3col-33-stacked .panel-col-last {
+	z-index: 101; /* put form above map if conflict, not working, but */
+}
+#node-23 .panel-3col-33-stacked .panel-col {
+	z-index: 1;
+	overflow: hidden; /* this hides the right-end of the map */
+}
+
 
 /*** Mailchimp Newsletter ***/
 
